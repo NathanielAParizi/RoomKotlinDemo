@@ -9,31 +9,31 @@ Application will allow users to store, update, delete, and read entries in the S
 1. Define the following thread synchronization approaches:
         - Locks 
 		
-		 locks are "advisory locks" which means that each thread will cooperate by acquiring the lock before accessing the same data. When a thread acquires a lock (has access to resources) then it is said to have "entered the moniter". Locks play an integral part of how threads interact with eachother in asynchronous systems.		
+	 locks are "advisory locks" which means that each thread will cooperate by acquiring the lock before accessing the same data. When a thread acquires a lock (has access to resources) then it is said to have "entered the moniter". Locks play an integral part of how threads interact with eachother in asynchronous systems.		
         - Mutex
 		
-			Mutex and locks are very similar. Here are some differences:
+	Mutex and locks are very similar. Here are some differences:
 			
-			-A mutex is a synchronization object. You acquire a lock on a mutex at the start  of a part in the code, and then afterwards release it once finished. This must be done to prevent any other thread accessing the same data contemporaneously. The mutex will have multiple threads attempting to access it.  A mutex's lifespan lasts for as long as the data that it's protecting. 
+	-A mutex is a synchronization object. You acquire a lock on a mutex at the start  of a part in the code, and then afterwards release it once finished. This must be done to prevent any other thread accessing the same data contemporaneously. The mutex will have multiple threads attempting to access it.  A mutex's lifespan lasts for as long as the data that it's protecting. 
 
-			-A lock object is an object that encapsulates a given lock on the mutex. When the object is constructed it will acquire the lock on the mutex. When it is destructed the lock is released. 
+	-A lock object is an object that encapsulates a given lock on the mutex. When the object is constructed it will acquire the lock on the mutex. When it is destructed the lock is released. 
 		
        
-		 - Semaphores
+	 - Semaphores
 		
-		A semphaore can be thought of as a traffic light in an intersection, it is simply a variable or abstract data type which is used to control access of a resource by multiple processes (signals) in a concurrent system. 
+	A semphaore can be thought of as a traffic light in an intersection, it is simply a variable or abstract data type which is used to control access of a resource by multiple processes (signals) in a concurrent system. 
 		
-        - Synchronized
+      - Synchronized
 		
-		  Process synchronization refers to the notion that many different processes must unite at a given point in order to execute a subsequent action.
+		Process synchronization refers to the notion that many different processes must unite at a given point in order to execute a subsequent action.
 	
 		
-        - Volatile
+     - Volatile
 		
 		the volatile keyword in Java and C++ indicates that a value may change between different accesses, even if it does not appear to be modified. A variable can be written or read to main memory or the CPU cache. Volatile allows for a variable to by read or written into main memory rather than the CPU cache. It is an important way in managing variables in multithreaded systems.		
 		
 		
-        - Atomic
+     - Atomic
 		
 		Declaring an atomic variable guarantees that substeps of the operation are completed within the given thread which they are to be executed in and must not be interrupted by any other threads.
 		
